@@ -90,8 +90,8 @@ func join(filename string) {
 		if err != nil {
 			panic(err)
 		}
-		io.Copy(outputFile, inputFile)
 		defer inputFile.Close()
+		io.Copy(outputFile, inputFile)
 
 		inputFile.Close()
 		index++
